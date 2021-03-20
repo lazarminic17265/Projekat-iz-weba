@@ -1,0 +1,120 @@
+.flexContRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexContCol{
+    display: flex;
+    flex-direction: column;
+}
+.divDrinks{
+    flex-grow: 1;
+    flex-wrap: wrap;
+    min-width: 33%;
+}
+.divNewCocktail{
+    flex-grow: 1;
+    flex-wrap: wrap;
+    min-width: 33%;
+}
+.divCocktails{
+    flex-grow: 1;
+    min-width: 33%;
+}
+.divCocktailsCont{
+    flex-wrap: wrap;
+}
+.divCocktailCounter{
+    text-align: right;
+}
+.inputDrinkAm{
+    width: 100px;
+}
+.glassSvg{
+    align-self: center;
+    margin-top: 10px;
+}
+.glass{
+    stroke:lightblue;
+    stroke-width:2;
+    fill: none;
+}
+.divDrinkInfo{
+    justify-content: space-evenly;
+}
+.btnMix{
+    width: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-self: center;
+}
+.btnReset{
+    width: 100px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+.divBarName{
+    text-align: center;
+    width: 100vw;
+}
+hr{
+    border: 0;
+    width: 100%;               
+    background-color:#000000;
+    height: 1px;
+}
+.btnAddBar{
+    width: 200px;
+    align-self: center;
+    margin-top: 10px;
+}
+.divAddBar{
+    align-self: center;
+    max-width: 50vw;
+}
+.btnSell{
+    align-self: center;
+    width: 200px;
+}
+.inputNCName{
+    width: 15vw;
+}
+.inputNCPrice{
+    width: 15vw;
+}
+.btnAddCocktail{
+    align-self: center;
+    width: 200px;
+}
+.divCocktailsCont{
+    flex-wrap: wrap;
+}
+.divCocktail{
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.cocktailGlass{
+    align-self: center;
+    margin-bottom: 5px;
+}
+.pCocktailInfo{
+    margin: 0;
+}
+
+@media only screen and (max-width: 800px){
+    .divBarContent{
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .inputNCName{
+        width: 70%;
+    }
+    .inputNCPrice{
+        width: 70%;
+    }
+}

@@ -1,0 +1,16 @@
+INSERT INTO [Drink] ([Name], [AlcPer], [Color], [Price])
+VALUES ('Votka', 40, 'f7f7e9', 2000);
+INSERT INTO [Drink] ([Name], [AlcPer], [Color], [Price])
+VALUES ('Zeleni Absent', 74, '00ff00', 3300);
+INSERT INTO [Drink] ([Name], [AlcPer], [Color], [Price])
+VALUES ('Rum', 42, '9C7931', 2240);
+INSERT INTO [Drink] ([Name], [AlcPer], [Color], [Price])
+VALUES ('Beli rum', 38, 'ddeded', 1200);
+INSERT INTO [Drink] ([Name], [AlcPer], [Color], [Price])
+VALUES ('Tekila', 50, 'ffe229', 1600);
+INSERT INTO [Drink] ([Name], [AlcPer], [Color], [Price])
+VALUES ('Koka kola', 0, '000000', 80);
+INSERT INTO [Drink] ([Name], [AlcPer], [Color], [Price])
+VALUES ('Crno vino', 12, '800101', 280);
+INSERT INTO [Drink] ([Name], [AlcPer], [Color], [Price])
+VALUES ('Pink dzin', 40, 'fc88f9', 3100);
