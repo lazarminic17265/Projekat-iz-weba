@@ -137,8 +137,7 @@ function renderNewCocktail(bar, container) {
 
     let inputNCName = createInput(["inputNCName"], "text", "inputNCName" + bar.id)
     let inputNCPrice = createInput(["inputNCPrice"], "number", "inputNCPrice" + bar.id)
-    inputNCName.value = "koktel1"
-    inputNCPrice.value = 500
+    inputNCPrice.value = 0
     divNewCocktail.appendChild(createElWithInnerHtml("p", ["pNewCName"], "Ime koktela")) //CName cocktail name
     divNewCocktail.appendChild(inputNCName)
     divNewCocktail.appendChild(createElWithInnerHtml("p", ["pNewCPrice"], "Prodajna cena koktela"))
@@ -210,12 +209,12 @@ function renderNewCocktail(bar, container) {
                 Ingredients: ingredients
             })
         }).then(r => {
+            if(r.status == 400){
+                alert("Poslati podaci nisu u odgovarajućem formatu");
+                return;
+            }
             if (r.status == 200) {
                 r.json().then(id => {
-                    if(id == -1) {
-                        alert("Poslati podaci nisu u odgovarajućem formatu");
-                        return;
-                    }
                     let cocktail = new Cocktail(id, bar.id, name, tmpDrinks, bar.isMixed, Math.round(price))
                     bars.find(e => e.id == bar.id).addCocktail(cocktail)
                     let divCocktailsCont = document.getElementById("divCocktailsCont" + bar.id)

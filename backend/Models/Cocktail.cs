@@ -9,7 +9,7 @@ namespace backend.Models {
         public int Id { get; set; }
 
         public int BarId { get; set; }
-        
+
         [StringLength(50, MinimumLength=3)]
         public string Name { get; set; }
 

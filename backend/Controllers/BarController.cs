@@ -24,16 +24,16 @@ namespace backend.Controllers
 
         [HttpPost]
         [Route("AddCocktail/{amount}/{cost}")]
-        public async Task<int> AddCocktail(int amount, int cost, [FromBody] Cocktail c) {
+        public async Task<ActionResult<int>> AddCocktail(int amount, int cost, [FromBody] Cocktail c) {
             Bar b = await Context.Bar.Include(b => b.Cocktails).FirstOrDefaultAsync(b => b.Id == c.BarId);
             if (b.Cocktails.Count == b.Capacity || c.Ingredients.Count == 0 || c.Price - cost < 0 || amount > 250) {
-                return -1;
+                return StatusCode(400);
             }
             Context.Cocktail.Add(c);
             await Context.SaveChangesAsync();
             return c.Id;
         }
-
+        
         [HttpPost]
         [Route("AddBar")]
         public async Task<int> AddBar([FromBody] Bar b) {
